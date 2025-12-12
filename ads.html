@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo Ads</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div id="ads-box"></div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<script>
+fetch("https://dummyjson.com/products?limit=3")
+  .then(res => res.json())
+  .then(data => {
+    const ads = data.products;
+    let html = `<div id="carouselExample" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">`;
+    ads.forEach((ad,i)=>{
+      html += `<div class="carousel-item ${i===0?'active':''}">
+                 <img src="${ad.thumbnail}" class="d-block w-100">
+                 <div class="carousel-caption d-none d-md-block">
+                    <h5>${ad.title}</h5>
+                 </div>
+               </div>`;
+    });
+    html += `</div>
+             <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon"></span>
+             </a>
+             <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+               <span class="carousel-control-next-icon"></span>
+             </a>
+            </div>`;
+    document.getElementById("ads-box").innerHTML = html;
+    $('.carousel').carousel();
+  });
+</script>
+</body>
+</html>
