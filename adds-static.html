@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>Bootstrap 4 Carousel</title>
+<title>adds Carousel</title>
 
-<!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
 <style>
-  .bd-placeholder-img {
-    font-size: 1.125rem;
-    user-select: none;
+  .carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
   }
 </style>
 
@@ -24,49 +24,29 @@
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
     <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0"></li>
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
 
     <div class="carousel-inner">
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="400" xmlns="http://www.w3.org/2000/svg">
-          <rect width="100%" height="100%" fill="#777"></rect>
-        </svg>
-        <div class="container">
-          <div class="carousel-caption text-left">
-            <h1>Example headline.</h1>
-            <p>Some representative placeholder content.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="400" xmlns="http://www.w3.org/2000/svg">
-          <rect width="100%" height="100%" fill="#777"></rect>
-        </svg>
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative content.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-          </div>
-        </div>
-      </div>
 
       <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="400" xmlns="http://www.w3.org/2000/svg">
-          <rect width="100%" height="100%" fill="#777"></rect>
-        </svg>
-        <div class="container">
-          <div class="carousel-caption text-right">
-            <h1>One more for good measure.</h1>
-            <p>Some representative content.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-          </div>
-        </div>
+        <a href="https://example.com">
+          <img src="https://via.placeholder.com/1200x400/777/fff" alt="Slide 1">
+        </a>
+      </div>
+
+      <div class="carousel-item">
+        <a href="https://example.com/page2">
+          <img src="https://via.placeholder.com/1200x400/888/fff" alt="Slide 2">
+        </a>
+      </div>
+
+      <div class="carousel-item">
+        <a href="https://example.com/page3">
+          <img src="https://via.placeholder.com/1200x400/999/fff" alt="Slide 3">
+        </a>
       </div>
 
     </div>
@@ -82,7 +62,6 @@
 
 </main>
 
-<!-- jQuery & Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
